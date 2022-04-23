@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+    <script type="text/javascript">
+        // 函数的定义和调用
+        // 函数定义方式一：
+        function abs(x){
+            if (x>=0){
+                return x
+            }else{
+                return -x
+            }
+        }
+        // 函数定义方式二:
+        var abs = function abs(x){
+            if (x>=0){
+                return x
+            }else{
+                return -x
+            }
+        }
+        //  方式一完全等价于方式二
+
+
+        // rest 参数
+        function foo(a, b, ...rest) {
+            console.log('a = ' + a);
+            console.log('b = ' + b);
+            console.log(rest);
+        }
+        foo(1,2,3,4,5)
+        foo(1)
+
+        // rest参数只能写在最后，前面用...标识，从运行结果可知，传入的参数先绑定a、b，多余的参数以数组形式交给变量rest
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

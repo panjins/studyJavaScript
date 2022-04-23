@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterable</title>
+    <script type="text/javascript">
+        // for  of
+        var a = ['A','B','C']
+        // 遍历数组
+        for(var x of a ){
+            console.log(x)
+        }
+        // 遍历Set
+        var s = new Set(['hi','ha','hou'])
+        for(var x of s ){
+            console.log(x)
+        }
+        // 遍历Map
+        var m = new Map([[1,'x'],[2,'y'],[3,'z']])
+        for(var x of m){
+            console.log(x[0]+'='+x[1])
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

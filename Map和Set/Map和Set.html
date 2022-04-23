@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map和Set</title>
+    <script type="text/javascript">
+        // Map是一组键值对的结构，具有极快的查找速度
+        var m = new Map([['zhangsan',19],['lisi',20]])
+        console.log(m.get('lisi'))
+        // 初始化Map
+        var m2 = new Map();
+      console.log(m2.set('wangwu',21))
+      console.log(m2.set('admin',44) ) //map中添加元素
+      console.log(m2.has('admin') ) //m2 中是否存在key admin
+      console.log(m2.delete('admin')) //删除key 为admin
+
+        // Set 是一种key的集合不存储value
+        var s1 = new Set()
+        var s2 = new Set([1,2,3])
+        console.log(s1)
+        console.log(s2)
+        s1.add(1)
+        s1.add(6)
+        console.log(s1)
+        s1.delete(7)
+        console.log(s1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

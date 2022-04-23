@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+    <!-- js部分 -->
+    <script type="text/javascript">
+        // 1. 字符串就是用“ 或者" "括起来的任意文本
+        console.log("这是字符串")
+        // 2.多行字符串 使用反引号 `...`表示
+        console.log(
+            `床前明月光，
+             疑是地上霜
+             举头望明月
+             低头思故乡`)
+
+        // 3.转义字符 \n 换行 \t 制表符  \\ 转义\
+        console.log("换行符:\n张\n三")
+        console.log("转义\\:\\xyz")
+        // 4.字符串拼接 使用 +
+        console.log("我"+"是"+"拼接"+"出来的")
+        // 5.字符串的常见操作
+        var nam = "lihua"
+            // 输出字符串的长度
+        console.log(nam.length)
+            // 通过索引取字符串某个位置的值(字符串是不可变的，无法通过索引来修改字符串的值)
+        console.log(nam[0])  
+            // 把一个字符串全部变成大写 toUpperCase
+        console.log(nam.toUpperCase()) 
+            // 把一个字符串全部转为小写 tolowCase
+        console.log(nam.toLowerCase())      
+            // 搜索指定字符出现的位置
+        console.log(nam.indexOf(h))  
+            // 返回指定索引区间的字串
+        console.log(nam.substring(0,2))       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

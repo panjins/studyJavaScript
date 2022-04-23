@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组复习</title>
+    <script type="text/javascript">
+        // js 数组支持任意数据类型
+        var arrOne = ['hi',4,6]
+        console.log(arrOne[0])
+        // 修改js数组中元素的值
+        arrOne[1] = "hello"
+        console.log(arrOne)
+        // length 表示数组的长度
+        console.log(arrOne.length)
+
+        // indexof 搜索一个指定元素的位置
+        console.log("----indexOf----")
+        let arrTwo = ['ha','hi',0,'lisi']
+        console.log(arrTwo.indexOf('lisi'))
+
+        // slice 切片,不给slice参数表示拷贝了整个数组
+        console.log("----切片----")
+       let arrThree = ['zhangsan',"lisi","wangwu"]
+       let sliceOne =  arrThree.slice(0,2)
+       console.log(sliceOne)
+
+       let copyArrThree = arrThree.slice()
+       console.log(copyArrThree)
+
+        //push 向数组末尾添加元素 pop 移除数组最后一个元素
+        console.log("----数组尾部添加元素 和 移除尾部第一个元素----")
+       let arrFour = [1,'javascript','java'] 
+       arrFour.push('Go')
+       console.log(arrFour)
+
+       console.log('现在移除GO字符')
+       arrFour.pop()
+       console.log(arrFour)
+    // ushift 向数组头部添加元素，shift移除数组头部的第一个元素
+        console.log("----数组头部添加元素和移除头部第一个元素----")
+       let arrFive = ['shanghai','wuhai']
+       arrFive.unshift('BeiJin')
+       console.log(arrFive)
+
+       console.log('移除BeiJin')
+       arrFive.shift()
+       console.log(arrFive)
+    //    sort 数组排序 
+        console.log("----数组排序sort 只支持字母----")
+        var arrSix = ['B','C','A']
+        arrSix.sort()
+        console.log(arrSix)
+    //  数组翻转 reverse
+        console.log("----数组翻转reverse----")
+        let arrSeven = ['one','two','three']
+        console.log(arrSeven.reverse())
+    // splice 从数组指定索引删除元素,然后再添加若干元素
+        console.log("----指定索引删除元素然后添加若干元素splice----")
+        let arrEight = ['1',0,'hah',99,100]
+        arrEight.splice(0,1,'wo')
+        console.log(arrEight)
+
+    // join把数组每个元素之间用特定的字符拼接
+        console.log("----join把数组每个元素之间用特定的字符拼接----")
+        let arrNine = [1,2,4,5,]
+        console.log(arrNine.join('and'))
+
+    // concat把多个数组拼接
+        console.log("把多个数组拼接concat")
+        let arrTen = [1,2]
+        let arrEven = arrTen.concat('one','two')
+        console.log(arrEven)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

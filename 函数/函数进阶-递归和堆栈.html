@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>递归和堆栈</title>
+    <script type="text/javascript">
+        // 写一个函数pow(x,n)，它可以计算x的n次方，换句话说就是 x 乘以自身n次
+
+        // 递归思路
+        function pow(x,n){
+            if (n == 1){
+                return x;
+            }else{
+                return x * pow(x,n-1);
+            }
+        }
+        alert(pow(2,3))
+        //使用箭头函数简化
+        function pow1(x,n){
+            return (n == 1) ? x : (x*pow(x,n-1));   
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

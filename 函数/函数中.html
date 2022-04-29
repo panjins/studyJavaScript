@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数中</title>
+    <script type="text/javascript">
+       
+        // 绑定到对象上的函数称为方法
+        var xiaoming = {
+            name: "小明",
+            birth: 1997,
+            age:function(){  
+                var y = new Date().getFullYear();
+                return y - this.birth;
+            }
+        }
+        console.log(xiaoming.age())
+
+        //apply() 控制this 指向
+        function getAge(){
+            var y = new Date().getFullYear();
+            return y - this.birth;
+        }
+        var xiaoli = {
+            name: "小李",
+            birth: 1995,
+            age:getAge
+        }
+
+        // apply 控制函数this的指向 接受两个参数 第一个参数是需要绑定的this变量 第二个参数是array
+        getAge.apply(xiaoli,[])
+        console.log(xiaoli.age())
+
+
+
+        // 高阶函数
+        // 1.map
+        function pow(x){
+            return x * x;
+        }
+        var arr = [1,2,3,4,5,6,7,8];
+        var results = arr.map(pow);
+        console.log(results)
+
+        // 2.filter
+        // filter 用于把array 的某些元素过滤掉，然后返回剩下的元素
+        
+        var arr1  = [1,2,3,4,5,6,7]
+        var r = arr1.filter(function(x){
+            return x % 2 !== 0;
+        })
+        console.log(r)
+    </script>    
+</head>
+<body>
+    
+</body>
+</html>

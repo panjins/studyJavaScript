@@ -5,19 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>对象</title>
-    <!-- 对象部分 -->
-    <script text="text/javascript">
-        var xiaoming = {
-            name:'小明',
-            birth:'1990',
-            school:'No.1 middle school',
-            height:1.70
-            
+    <script type="text/javascript">
+        // 创建对象的两种方式
+        let uesr = new  Object();  //构造函数 创建对象
+        let users ={}; // 字面量创建·
+
+        let userInfo = {
+            name:"John",
+            age: 30,
+            "like birds":true  //多词属性名必须加上引号
         }
-        console.log(xiaoming.name)
-        console.log('age' in xiaoming)
-        console.log(xiaoming.hasOwnProperty('name'))
+        
+        alert(userInfo["like birds"]) //多词属性名无法用点操作
+        delete userInfo.age  //删除属性
+        
+
+        // 计算属性
+        // 当创建一个对象时，我们可以在字面量中使用方括号。这样叫做计算属性
+
+        let fruit = prompt("which fruit to buy?","apple");
+        let bag = {
+            [fruit]:5,
+
+        };
+        alert(bag.apple);
+
+
+        // for ... in循环
+        let students = {
+            name:"zhangsan",
+            age:10,
+            school: "shanghai",
+        };
+
+        for (student in students){
+            alert(student)
+            alert(students[student])
+        }
     </script>
+    
+    
 </head>
 <body>
     

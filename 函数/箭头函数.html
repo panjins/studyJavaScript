@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+    <script type="text/javascript">
+        // 箭头函数
+        let sum = (a,b) => a + b
+        // 等同于
+        let sum1 = function(a,b){
+            return a + b;
+        }
+        alert(sum())
+
+        // 只有一个参数时可以省略参数外面的括号
+        let double = n => n * 2;
+        alert(double(3));
+        
+        // 如果没有参数  则括号为空（但是括号必须保留）
+        let sayhi =  () => alert("hi") 
+        
+        // 箭头函数可以像函数表达式一样使用
+        let  age = prompt("what is your age ?",18);
+        let welcome = (age < 18) ?
+        () => alert("hello"):
+        () => alert("greetings")
+        welcome()
+
+
+        // 多行箭头函数
+        // 多行箭头函数，用或括号括起来之后 需要包含return 才能返回
+        let sum2 = (a,b) => {
+            let result = a + b;
+            return result;
+        };
+        alert(sum(1,2));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

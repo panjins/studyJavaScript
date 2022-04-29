@@ -25,6 +25,18 @@
         }
         //  方式一完全等价于方式二
 
+        // 函数的实参可以是任意类型
+        function sayHello(o){
+            console.log("我的名字"+o.name,+"我的年龄"+o.age )
+        }
+
+        var zhangsan = {
+            name:"zhangsan",
+            age: 18,
+        };
+
+        sayHello(zhangsan)
+
 
         // rest 参数
         function foo(a, b, ...rest) {
@@ -36,6 +48,9 @@
         foo(1)
 
         // rest参数只能写在最后，前面用...标识，从运行结果可知，传入的参数先绑定a、b，多余的参数以数组形式交给变量rest
+
+
+         
     </script>
 </head>
 <body>

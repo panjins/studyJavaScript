@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest参数和Spread</title>
+    <script type="text/javascript">
+        // rest参数可以通过使用... 并在后面跟着包含剩余参数的数组名称，来将他们包含在函数的定义中
+        function sumAll(...args){
+            let sum = 0;
+            for(let arg of args)sum += arg;
+            return sum;
+        }
+        alert(sumAll(1));
+        alert(sum(1,2));
+        alert(sum(1,2,3,4))
+
+        // arguments 变量 按参数索引包含所有参数
+        function showName(){
+            alert(arguments.length);
+            alert(arguments[0]);
+            alert(arguments[1]);
+        }
+
+        showName("julius","Caesar")
+        showName("Ilya")
+
+        // spread 语法 也使用... 可以把迭代对象展开到参数中
+
+        let arr =  [3,5,1]
+        alert(Math.max(...arr))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

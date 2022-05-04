@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数</title>
+    <script type="text/javascript">
+        // 立即执行函数，函数定义完成，立即被调用，往往只会执行一次
+        (function(){
+            alert("匿名函数")
+        })();
+
+        (function(a,b){
+            console("a="+ a);
+            console("b="+ b);
+        })(123,456)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方法的定义</title>
+    <script type="text/javascript">
+        // 定义对象
+        var obj =  new Object();
+        // 对象中添加属性
+        obj.name = "对象";
+        obj.age = 18
+        //对象的属性值可以是任何数据类型 也可以是函数
+        obj.sayName = function(){
+            console.log(obj.name)
+        };
+        console.log(obj.name);
+
+        // 函数也可以作为对象的属性，如果一个函数作为对象的属性保存，那么也可以称这个函数为对象的方法（method）
+
+        var obj2 = {
+            name:"猪八戒",
+            age: 18,
+
+           alertName:function (){
+                console.log(obj2.name)
+           }
+        };
+        obj2.alertName();
+
+
+        // 枚举对象中的属性
+        var obj = {
+            name: "孙悟空",
+            age: 18,
+            gender: "男",
+            address: "花果山"
+        }
+
+        // for in 语句 遍历对象中的属性，对象中有几个属性就会执行几次
+         
+        // 1.遍历属性
+        for (var i in obj ){
+            console.log("属性名"+ i)
+        }
+
+        // 2.遍历属性的值
+        for (var n in obj){
+            console.log("属性值"+obj[n])
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

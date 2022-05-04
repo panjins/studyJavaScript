@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+    <script type="text/javascript">
+        // 全局作用域中有一个全局对象window 
+        // 全局变量都是 window对象的属性
+        var a = "张三"
+        console.log(window.a)
+
+        // 创建的函数都会作为window的方法
+        function fun(){
+            console.log("玩的开心")
+        }
+
+        window.fun()
+
+
+
+        // 函数作用域  函数作用域里可以访问全局变量
+        var a = 10
+        function getFun(){
+            console.log("a="+a);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工厂方法创建对象</title>
+    <script text="text/javascript">
+
+        // 工厂方法创建的对象都是object类型 导致无法区分多种类型的对象
+        function createPerson(name,age,gender){
+            // 1.创建一个新对象
+            var obj = new Object();
+            obj.name  = name;
+            obj.age = age;
+            obj.gender = gender;
+            obj.sayHello = function(){
+                alert(this.gender)
+            }
+
+
+
+            // 2.将新对象返回
+            return obj;
+        }
+
+        var objone = createPerson("张三",18,"女");
+        console.log(objone);
+        objone.sayHello();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

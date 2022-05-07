@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型对象</title>
+    <script type="text/javascript">
+
+        /*
+         原型prototype
+         我们所创建的每一个函数，解析器都会像函数中添加一个属性 prototype
+          如果函数作为普通函数调用 prototype 没有任何作用
+          当函数通过构造函数调用时，所创建的对象中都会有一个隐含的属性，指向该构造函数的原型对象 通风__proto＿＿来访问属性 
+          原型对象就相当于一个公共区域 所有同一个类的实例 都可以访问到
+          当访问对象的属性或方法时他会现在自身对象中寻找，如果有则直接使用 如果没有则去原型对象中找
+          原型对象也是对象 也有原型
+        */
+
+
+        function MyClass(){
+
+        }
+
+        MyClass.prototype.a = 123;
+
+        let mc = new MyClass();
+        console.log(mc.a) //原型对象中查找a 属性
+
+        // 向原型对象中添加sayHello 方法
+        MyClass.prototype.sayHello = function(){
+            console.log("hello 这是原型对象中的方法");
+        }
+        mc.sayHello()
+        console.log(mc.__proto__);
+
+        let mc1 = new MyClass();
+        mc1.sayHello()
+
+
+        // 直接向原型中添加方法
+        MyClass.prototype.sayHi = function(){
+            console.log("大家好我是张三")
+        }
+
+        // 使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有 也会返回true
+        console.log("sayHello()" in mc1)
+        // 可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性
+        console.log(mc1.hasOwnProperty("sayHello()"))
+
+
+
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

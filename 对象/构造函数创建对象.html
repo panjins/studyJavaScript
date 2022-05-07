@@ -21,10 +21,11 @@
         使用同一个构造函数创建的对象，我们称为一类对象，也将一个构造函数称为一个类
         我们将通过一个构造函数创建的对象 称为该类的实例 
         
+        构造函数执行一次就会创建一个新的对象，执行一次就会创建一个方法
         
     */
 
-        function Person(name,age,gender){
+        function Person(name,age,gender){ 
             this.name = name;
             this.age = age;
             this.gender = gender;
@@ -32,7 +33,17 @@
             this.sayHi = function(){
                 console.log(this.name + this.age +this.gender)
             }
+
+            // 创建一个所有对象共享的方法
+            this.sayHello = fun;
         }
+
+        // fun 方法只要创建一次所有对象都可以使用
+        function fun(){
+            alert(this.name)
+        }
+
+
  
         var per = new Person("孙悟空",34,"女");
         console.log(per);

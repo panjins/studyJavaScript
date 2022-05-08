@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式简介和使用</title>
+    <script type="text/javascript">
+        /*
+        * \d 匹配一个数字  \w 匹配一个字母或数字； 所以'00\d' 可以匹配 '007'无法匹配'00A'
+        *  . 可以匹配任意字符 所以 'js.'可以匹配 ’jsp‘ 'jss'
+        * 在正则表达式中，用*表示任意个字符（包括0个），用+表示至少一个字符，用?表示0个或1个字符，用{n}表示n个字符，用{n,m}表示n-m个字符
+        * A|B可以匹配A或B，所以(J|j)ava(S|s)cript可以匹配'JavaScript'、'Javascript'、'javaScript'或者'javascript'。
+
+        *   ^表示行的开头，^\d表示必须以数字开头。
+
+        *  $表示行的结束，\d$表示必须以数字结束。
+        *
+        *
+        * 第一种方式是直接通过/正则表达式/写出来，第二种方式是通过new RegExp('正则表达式')创建一个RegExp对象。
+        * */
+
+        let re1  = /ABC\-001/
+        let re2  =  new RegExp('ABC\\-001') // 两个\\中的一个是转义字符
+
+        //RegExp对象的test()方法用于测试给定的字符串是否符合条件。
+        let re = /^\d{3}\-\d{3,8}$/ //这里也可以不转义 re = /^\d{3}-\d{3,8}$/ 结果一样
+        console.log(re.test('010-1234s'))
+        console.log(re.test('021-600800'))
+        console.log(re.test('021 600800'))
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

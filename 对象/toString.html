@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toString</title>
+    <script type="text/javascript">
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+    //    创建一个Person实例
+        var per = new Person("孙悟空",18,"男")
+
+            /**
+             * 当我们在页面上打印一个对象时，实际上时输出对象的toString()方法的返回值
+             *如果我们希望在输出对象时不输出[object object] 可以为对象添加一个toString()方法
+             * 通风修改原型的toString()方法可以使通过构造函数创建的所有对象 toString() 输出的内容都发生改变
+             */
+        per.toString = function (){
+            return "我是一个快乐的小小鸟";
+        }
+
+       console.log(per);
+       console.log(per.toString());  //两个结果相同
+
+    //    修改原型的toString()
+        Person.prototype.toString = function (){
+            return "Person[name="+this.name+",age="+this.age+",gender="+this.gender+"]"
+        }
+
+        var per1 = new Person("张阿三",99,"哈")
+        console.log(per1)
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

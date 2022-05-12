@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式语法</title>
+    <script type="text/javascript">
+        //创建正则表达式对象
+        /*
+        * var 变量 = new RegExp("正则表达式","匹配模式")
+        * 使用typeof检查正则对象  会返回object
+        * 使用test()方法 检查一个字符串是否符合正则表达式
+        *
+        * 匹配模式： i  忽略大小写  g 全局匹配模式
+        * */
+        let reg = new RegExp("a","i"); //检查一个字符串中是否含有a
+        console.log(reg.test("a"))
+        console.log(reg.test("AVC"))
+
+        //使用字面量来创建正则表达式 var 变量 = /正则表达式/匹配模式
+        re = /a/i;
+        console.log(re.test("ASDDAA"))
+
+        // 创建一个正则表达式，检查一个字符串中是否含有a或b | 表示或者
+        let re1  = /a|b|c/
+
+        console.log(re1.test("HHavdbC"))
+
+        let re2 = /[ab]/ //ab也是或
+        console.log(re2.test("budefg"))
+
+        /*
+        * []里的内容也是或的关系
+        * [ab] == a|b
+        * [a-z] 任意字母小写
+        * [A-Z] 任意大写字母
+        * [A-z] 任意字母
+        * [^ ] 除了 [^ab] 除了a或b都行
+        * [0-9]任意数字
+        * [^0-9]除了数字
+        * */
+
+    //    检查一个字符串中是否含有 abc 或 adc 或aec
+        reg = /abc|adc|aec/
+        let reg3 = /a[bde]c/
+
+        console.log(reg.test("aec"))
+        console.log(reg3.test("aec"))
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+  <!--
+    事件 就是文档或 浏览窗口中发生的一些特定的交互瞬间
+    js 和 html 之间的交互是通过事件实现的
+    对于web应用来说，有下面这些代表性的事件：点击某个元素 将鼠标移到某个元素上方 按下键盘上某个键等等
+
+    处理事件：可以在事件对应的属性中设置一些js代码，这样当事件被触发时 这些代码将会执行
+
+  -->
+</head>
+<body>
+    <!-- 结构和行为耦合，不方便维护，不推荐使用   -->
+<!--    <button id="btn" onmousemove="alert('讨厌，你点我干嘛');">按钮你点我一下</button>-->
+    <button id="btn">按钮你点我一下</button>
+    <script type="text/javascript">
+        //可以为按钮的对应事件绑定函数处理的形式来响应事件 ,当事件被触发时函数会被调用
+
+        //获取按钮对象
+        var btn = document.getElementById("btn");
+        //绑定点击事件
+        btn.onclick = function () {
+            alert("你还点~~~");
+        }
+
+    </script>
+</body>
+</html>

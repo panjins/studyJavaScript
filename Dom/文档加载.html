@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档加载</title>
+    <script type="text/javascript">
+        //onload 在页面加载完成后运行
+        //为window绑定onload 事件 该函数会在页面加载完后执行，可以确保我们的代码执行时所有的Dom对象已经加载
+
+        window.onload = function (){
+            var btn = document.getElementById("btn");
+            btn.onclick = function (){
+                alert("Hello");
+            }
+
+        }
+
+    </script>
+</head>
+<!--
+    浏览器加载一个页面时，自上而下加载
+    读取一行运行一行
+
+
+-->
+
+
+<body>
+    <button id="btn">我是按钮 你来点我呀</button>
+
+</body>
+</html>
